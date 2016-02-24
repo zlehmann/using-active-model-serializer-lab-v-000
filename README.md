@@ -1,4 +1,4 @@
-# Using ActiveModel::Serailizer Lab
+# Using ActiveModel::Serializer Lab
 
 ## Objectives
 
@@ -20,7 +20,7 @@ Latin practice!
    `products_controller` to use the new serializer in place of the
 existing `to_json` code.
 2. Update the product show page to handle the new JSON.
-3. On the products `index` page, update the `More Info` buttton so that it
+3. On the products `index` page, update the `More Info` button so that it
    uses the `/products/id.json` route to get both description and
 inventory.
   * **Note:** The serializer will return a different value for
