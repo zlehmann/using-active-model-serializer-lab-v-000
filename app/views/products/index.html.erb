@@ -3,8 +3,6 @@
   <h3><%= product.name %></h3>
   <div id="product-<%= product.id %>"><%= truncate(product.description) %></div>
   <button class="js-more" data-id="<%= product.id %>">More Info</button>
-  <ul id="product-<%= product.id %>-orders">
-  </ul>
 <% end %>
 
 <script type="text/javascript" charset="utf-8">
@@ -22,9 +20,14 @@ $(function() {
       var orders = product["orders"];
       var orderList = "";
       orders.forEach(function(order) {
-        orderList += '<li class="js-order" data-id="' + order["id"] + '">' + order["id"] + ' - ' + order["created_at"] + '</li>';
+        orderList += '<li class="js-order" data-id="' + order["id"] + '">' + order["id"] + ' - ' + order["created_at"];
+        orderList += ' <br>Products:<ol>';
+        products = order["products"];
+        products.forEach(function(prod) {
+          orderList += '<li>' + prod["name"] + '</li>';
+        });
+        orderList += '</ol></li>';
       });
-      $("#product-" + id + "-orders").html(orderList);
     });
   });
 });
