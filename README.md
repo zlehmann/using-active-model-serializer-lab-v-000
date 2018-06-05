@@ -1,7 +1,6 @@
 # Using ActiveModel::Serializer Lab
 
 ## Objectives
-  0. Hlello
   
   1. Use AMS to render JSON.
   2. Use AMS to render JSON associations.
