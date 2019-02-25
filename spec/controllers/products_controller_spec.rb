@@ -12,7 +12,7 @@ RSpec.describe ProductsController, type: :controller do
   describe "POST create" do
 
     it 'creates a new product' do
-      post :create, product: @product_attributes
+      post :create, params: { product: @product_attributes }
       expect(response).to redirect_to(products_path)
       expect(Product.count).to eq 1
     end
@@ -23,7 +23,7 @@ RSpec.describe ProductsController, type: :controller do
     it 'returns a JSON representation of the product' do
       product = Product.create(@product_attributes)
 
-      get :show, id: product.id, format: 'json'
+      get :show, params: { id: product.id }, format: 'json'
       body = JSON.parse(response.body)
       expect(body["name"]).to eq product.name
       expect(body["description"]).to eq product.description
