@@ -2419,3 +2419,13 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/products/32" for 199.168.243.194 at 2019-04-19 14:28:50 +0000
+Cannot render console from 199.168.243.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 18.7ms | ActiveRecord: 1.8ms)
+
+
