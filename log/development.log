@@ -2291,3 +2291,25 @@ Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
 
 Started GET "/products/32.json" for 199.168.243.194 at 2019-04-19 14:12:24 +0000
 Cannot render console from 199.168.243.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"32"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (29.35ms)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `order' for #<Product:0x00007f8fd4270f90>
+Did you mean?  orders
+               orders=):
+  
+app/controllers/products_controller.rb:27:in `show'
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.1ms)
