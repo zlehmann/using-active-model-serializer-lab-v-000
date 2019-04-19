@@ -3255,3 +3255,19 @@ Processing by ProductsController#show as JSON
 Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/products/34.json" for 199.168.243.194 at 2019-04-19 15:22:10 +0000
+Cannot render console from 199.168.243.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"34"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/34.json" for 199.168.243.194 at 2019-04-19 15:22:10 +0000
+Cannot render console from 199.168.243.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"34"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
