@@ -2718,3 +2718,19 @@ Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
 
 Started GET "/products" for 199.168.243.194 at 2019-04-19 14:57:46 +0000
 Cannot render console from 199.168.243.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 382ms (Views: 353.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/30.json" for 199.168.243.194 at 2019-04-19 14:57:48 +0000
+Cannot render console from 199.168.243.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"30"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 5.7ms | ActiveRecord: 0.3ms)
+
+
