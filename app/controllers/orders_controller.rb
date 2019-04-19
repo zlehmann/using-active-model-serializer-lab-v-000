@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
     @orders = Order.all
   end
 
-  def show 
+  def show
     @order = Order.find(params[:id])
     render json: @order, status: 200
   end
