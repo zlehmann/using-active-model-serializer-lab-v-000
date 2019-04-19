@@ -2439,3 +2439,11 @@ Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.2ms)
 
 Started GET "/products" for 199.168.243.194 at 2019-04-19 14:30:54 +0000
 Cannot render console from 199.168.243.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 431ms (Views: 398.8ms | ActiveRecord: 1.4ms)
+
+
